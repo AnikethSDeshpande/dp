@@ -13,11 +13,27 @@ int pow(int base, int power){
     return base * x;
 }
 
+int fastPow(int base, int pow) {
+    if (pow == 0) {
+        return 1;
+    }
+
+    int subProb = fastPow(base, pow/2);
+    int subProbSq = subProb * subProb;
+
+    if (pow & 1){
+        return subProbSq * base;
+    }
+
+    return subProbSq;
+}
+
 int main(){
-    int n = 5;
-    int m = 4;
+    int b = 5;
+    int p = 4;
 
-    cout << pow(n,m) << el;
-
+    cout << pow(b, p) << el;
+    cout << fastPow(b, p) << el;
+    
     return 1;
 }
