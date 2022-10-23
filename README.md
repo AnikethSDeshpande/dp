@@ -12,3 +12,4 @@ II. Backtracking
 1. Subsets
 2. N Queens - print one
 3. N Queens - count all
+4. Generate Brackets
